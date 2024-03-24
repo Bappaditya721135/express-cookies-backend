@@ -25,8 +25,8 @@ app.post("/login", (req, res) => {
         let date = new Date();
             date.setMinutes(date.getMinutes() + 10);
         return res.cookie("token",{id: "fejfoefo"}, {
-            // maxAge: 300000,
-            expires: date,
+            maxAge: 3000000,
+            // expires: date,
             sameSite: "none",
             secure: true,
         }).json({
